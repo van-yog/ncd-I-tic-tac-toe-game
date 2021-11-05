@@ -1,0 +1,91 @@
+.field {
+  background-color: rgb(231, 231, 231);
+  width: 620px;
+  height: 620px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.field > div {
+  min-width: 200px;
+  min-height: 200px;
+  background-color: rgb(173, 173, 173);
+  transition: all 0.3s;
+  font-size: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.field > div:hover {
+  cursor: pointer;
+  background-color: rgb(231, 231, 231);
+}
+
+.control-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.game {
+  width: fit-content;
+  margin-top: 30px;
+}
+
+.active {
+  outline: 3px solid rgba(0, 0, 255, 0.459) !important;
+}
+
+.value {
+  background-color: rgb(231, 231, 231) !important;
+  pointer-events: none !important;
+}
+
+.end-game {
+  pointer-events: none !important;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(173, 173, 173, 0.295) !important;
+}
+
+.loading-background {
+  opacity: 0.5;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
