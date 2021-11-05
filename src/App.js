@@ -29,7 +29,6 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
       setWinner(winner);
       if (winner !== "No winner") {
         setEndGame(true);
-        console.log("set END GAME: true");
       }
     } catch (e) {
       console.log(e);
@@ -90,7 +89,7 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
 
             <div className="control-button">
               <button onClick={handleNewGame}>New game</button>
-              {endGame && <div>{winner}</div>}
+              {endGame && <div className="winner-text">{winner}</div>}
               <button onClick={handClickApprove} disabled={endGame}>
                 Approve move
               </button>
