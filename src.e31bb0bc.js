@@ -32574,13 +32574,12 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 /* eslint-disable no-undef */
 const BOATLOAD_OF_GAS = (0, _big.default)(3).times(10 ** 13).toFixed();
 
-const App = _ref => {
-  let {
-    contract,
-    currentUser,
-    nearConfig,
-    wallet
-  } = _ref;
+const App = ({
+  contract,
+  currentUser,
+  nearConfig,
+  wallet
+}) => {
   const [steps, setSteps] = (0, _react.useState)([]);
   const [activeField, setActiveField] = (0, _react.useState)(undefined);
   const [winner, setWinner] = (0, _react.useState)("No winner");
@@ -32596,7 +32595,6 @@ const App = _ref => {
 
       if (winner !== "No winner") {
         setEndGame(true);
-        console.log("set END GAME: true");
       }
     } catch (e) {
       console.log(e);
@@ -32645,7 +32643,9 @@ const App = _ref => {
     className: "control-button"
   }, /*#__PURE__*/_react.default.createElement("button", {
     onClick: handleNewGame
-  }, "New game"), endGame && /*#__PURE__*/_react.default.createElement("div", null, winner), /*#__PURE__*/_react.default.createElement("button", {
+  }, "New game"), endGame && /*#__PURE__*/_react.default.createElement("div", {
+    className: "winner-text"
+  }, winner), /*#__PURE__*/_react.default.createElement("button", {
     onClick: handClickApprove,
     disabled: endGame
   }, "Approve move")))) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("button", {
@@ -52567,7 +52567,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64128" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52220" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

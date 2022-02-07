@@ -1,7 +1,7 @@
 .field {
   background-color: rgb(231, 231, 231);
-  width: 620px;
-  height: 620px;
+  width: 380px;
+  height: 380px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -9,12 +9,11 @@
 }
 
 .field > div {
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 120px;
+  min-height: 120px;
   background-color: rgb(173, 173, 173);
   transition: all 0.3s;
-  font-size: 120px;
-
+  font-size: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +47,10 @@
 
 .end-game {
   pointer-events: none !important;
+}
+
+.winner-text {
+  padding: 0 5px;
 }
 
 .loading {
